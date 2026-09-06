@@ -6,6 +6,35 @@ from pathlib import Path
 import numpy as np
 
 
+BPM_FOLD_LO = 70.0    # 作業用BGM/lofi/chill の体感テンポはこの帯に収まるので、
+BPM_FOLD_HI = 140.0   # librosa が拾いがちな倍/半テンポをこの範囲に畳み込む
+
+
+def _estimate_bpm(y, sr) -> float:
+    """BPM を推定し、倍テンポ・半テンポの取り違えを [70,140) に正規化する。
+
+    librosa.feature.tempo は倍/半テンポに飛びやすいので、より安定な
+    beat_track を主に使い、失敗時のみ tempo にフォールバックする。
+    """
+    import librosa
+
+    try:
+        tempo, _beats = librosa.beat.beat_track(y=y, sr=sr)
+    except Exception:
+        tempo_fn = getattr(librosa.feature, "tempo", None)
+        if tempo_fn is None:
+            import librosa.feature.rhythm as _rhythm
+            tempo_fn = _rhythm.tempo
+        tempo = tempo_fn(y=y, sr=sr)
+
+    bpm = float(np.atleast_1d(tempo)[0])
+    while bpm >= BPM_FOLD_HI:
+        bpm /= 2.0
+    while 0 < bpm < BPM_FOLD_LO:
+        bpm *= 2.0
+    return bpm
+
+
 def extract_features(path: Path, sr: int = 22050) -> dict:
     """BPM・スペクトル重心（明るさ）・RMS（エネルギー感）を抽出する。"""
     import librosa
@@ -14,12 +43,7 @@ def extract_features(path: Path, sr: int = 22050) -> dict:
     if y.size == 0:
         raise ValueError(f"音声が空です: {path}")
 
-    # BPM: librosa のバージョン差を吸収
-    tempo_fn = getattr(librosa.feature, "tempo", None)
-    if tempo_fn is None:
-        import librosa.feature.rhythm as _rhythm  # librosa 一部バージョン
-        tempo_fn = _rhythm.tempo
-    bpm = float(np.atleast_1d(tempo_fn(y=y, sr=sr))[0])
+    bpm = _estimate_bpm(y, sr)
 
     centroid = float(np.mean(librosa.feature.spectral_centroid(y=y, sr=sr)))
     rms = float(np.mean(librosa.feature.rms(y=y)))
