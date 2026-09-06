@@ -19,9 +19,11 @@ for _d in (INPUT_DIR, WORK_DIR, OUTPUT_DIR):
 #   analyze_references.py が各フォルダの音源を解析し REF_INDEX に特徴量を書き出す。
 #   1バケットにつき wav/flac/mp3 を1曲以上入れておく（複数入れると平均を取る）。
 # ------------------------------------------------------------------
+#   bpm_hint = そのバケットの設計テンポ（体感）。⑥ の routing はこの値を使う
+#   （各リファレンスの実測BPMではなく）。理由は step6_pick_reference.py の pick() 参照。
 BUCKETS = {
-    "A_calm":     {"label": "落ち着き系",  "bpm_hint": 88},   # 〜95BPM  マイナー寄り・メロウ
-    "B_standard": {"label": "標準系",      "bpm_hint": 108},  # 95〜120BPM 長調寄り・軽やか
+    "A_calm":     {"label": "落ち着き系",  "bpm_hint": 80},   # 〜95BPM  マイナー寄り・メロウ
+    "B_standard": {"label": "標準系",      "bpm_hint": 104},  # 95〜120BPM 長調寄り・軽やか
     "C_drive":    {"label": "推進系",      "bpm_hint": 128},  # 120BPM〜 steady groove
 }
 

@@ -30,12 +30,23 @@ def load_index() -> dict:
 
 
 def pick(cand: dict, index: dict) -> tuple[str, list[dict]]:
-    refs = [dict(bucket=b, **v["features"]) for b, v in index.items()]
+    # BPM は各リファレンスの実測値ではなくバケットの設計テンポ(bpm_hint)で routing する。
+    # librosa の実測は倍/半テンポでブレ、かつ少数のリファレンスがテンポ全域をカバー
+    # しないため、「C_drive＝速い曲」等のラベルが実態とズレる。リファレンス音声そのものは
+    # ⑦ の音色/ラウドネスマッチングでそのまま使う（routing と音作りを分離）。
+    refs = []
+    for b, v in index.items():
+        f = v["features"]
+        hint = config.BUCKETS.get(b, {}).get("bpm_hint", f["bpm"])
+        refs.append({"bucket": b, "bpm": float(hint),
+                     "spectral_centroid": f["spectral_centroid"], "rms": f["rms"],
+                     "measured_bpm": f["bpm"]})
     ranked = []
     for r in refs:
         d = weighted_distance(cand, r, refs, config.MATCH_WEIGHTS)
         ranked.append({"bucket": r["bucket"], "distance": round(d, 4),
-                       "features": {k: r[k] for k in ("bpm", "spectral_centroid", "rms")}})
+                       "features": {"bpm_hint": r["bpm"], "measured_bpm": r["measured_bpm"],
+                                    "spectral_centroid": r["spectral_centroid"], "rms": r["rms"]}})
     ranked.sort(key=lambda x: x["distance"])
     return ranked[0]["bucket"], ranked
 
@@ -67,7 +78,7 @@ def main() -> int:
         mark = " ←選定" if r["bucket"] == best else ""
         b = config.BUCKETS.get(r["bucket"], {})
         log(f"{r['bucket']} ({b.get('label', '')}): 距離 {r['distance']:.4f}"
-            f"  [BPM={r['features']['bpm']:.1f}]{mark}")
+            f"  [設計BPM={r['features']['bpm_hint']:.0f} / 実測{r['features']['measured_bpm']:.0f}]{mark}")
 
     result = {
         "input": str(args.input),
