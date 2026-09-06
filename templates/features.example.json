@@ -1,0 +1,20 @@
+{
+  "_note": "① の出力例。Billboard JAPAN Hot 100 TOP20 のうち7曲以上に共通した構造的特徴のみを、著作権で保護されない要素に限って記録する。実数付きで。",
+  "source": "Billboard JAPAN Hot 100 週間チャート YYYY-MM-DD 付 TOP20",
+  "analyzed_at": "YYYY-MM-DD",
+  "songs_analyzed": 20,
+  "common_threshold": 7,
+  "common_features": {
+    "bpm_range": { "min": 118, "typical": 130, "max": 145, "matched_songs": 13 },
+    "time_signature": { "value": "4/4", "matched_songs": 19 },
+    "key_mode": { "value": "major", "matched_songs": 12 },
+    "instrumentation": {
+      "items": ["four-on-the-floor kick", "bright synth pluck", "electric bass", "layered vocal harmony"],
+      "matched_songs": 11
+    },
+    "title_pattern": { "value": "短い名詞1〜2語 / 英日混在", "matched_songs": 9 },
+    "lyric_subject": { "value": "二人称（きみ / あなた）への語りかけ", "matched_songs": 8 },
+    "structure": { "value": "Intro-Verse-PreChorus-Chorus x2-Bridge-Chorus-Outro", "matched_songs": 10 }
+  },
+  "notes": "実音源・メロディ・歌詞そのものは保存しない。BPM等の数値と一般的傾向のみ。"
+}

@@ -1,0 +1,14 @@
+# 作業ファイル・成果物・音源は追跡しない
+/work/
+/output/
+/input/
+/references/*/*.wav
+/references/*/*.flac
+/references/*/*.mp3
+/references/*/*.aiff
+/references/references.json
+
+# venv / キャッシュ
+/.venv/
+__pycache__/
+*.pyc

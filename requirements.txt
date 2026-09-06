@@ -1,0 +1,23 @@
+# ① チャート分析補助 / 汎用
+requests
+
+# ③ 歌詞検証（かな併記の補助に pykakasi。無くても表記=よみ入力なら動く）
+pykakasi
+
+# ⑤ ステム調整・エフェクトチェーン
+pedalboard
+
+# ⑥ リファレンス選定（BPM・スペクトル重心・RMS 抽出）
+librosa
+
+# ⑦ リファレンスマスタリング
+matchering
+
+# ⑨ QC（LUFS / True Peak 測定）
+pyloudnorm
+
+# 音声 I/O（librosa / matchering / pyloudnorm の共通依存を明示）
+soundfile
+numpy
+
+# ⑧ ⑩ は同梱の ffmpeg / ffprobe を subprocess 経由で使用（Python依存なし）
