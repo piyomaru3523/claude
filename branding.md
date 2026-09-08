@@ -24,8 +24,13 @@
 - **ジャケット**: 全リリースでトンマナ（作風・色・雰囲気）を統一する。方向性は未確定（TODO）。
   仕様: JPG / 3000×3000px 正方形 / RGB / 25MB 未満。
 
+## SNS
+- Instagram: **`@_tonarine`**（`@tonarine` が取得不可のため）。表示名は `Tonarine` で統一。
+  種別=クリエイター／カテゴリ=ミュージシャン。
+
 ## TODO
 - [ ] ジャケットのアートディレクション決定（作風・カラーパレット・作成方法）
-- [ ] Instagram `@tonarine` を確保
-- [ ] RouteNote アカウント作成（Free プラン）
+- [x] Instagram `@_tonarine` を確保
+- [ ] Instagram プロフィール文・キービジュアル設定
+- [ ] RouteNote アカウント作成（Free プラン）※作業中
 - [ ] Suno を商用利用権つき有料プランに
