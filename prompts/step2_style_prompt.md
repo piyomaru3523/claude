@@ -24,6 +24,9 @@
 - **このプロジェクトの棚（作業用BGM）に合わせる**: 盛り上げすぎない。"nothing sharp or forward",
   "sits back in the mix", "lifts only a little" のように控えめさを明示。参照例文が
   trance/euphoric 寄りでも、語彙は「暖かい・夜・低刺激」に振る
+- **ノイズテクスチャ（vinyl crackle / tape hiss）を Styles に書かない**。lo-fi でも Suno が
+  過剰に入れ、⑧の -14LUFS 化でノイズ床が約10dB 持ち上がって目立つ（001回目の反省）。
+  "clean" "a quiet noise floor" を書き、Exclude 先頭に "vinyl crackle, tape hiss, hissy noise floor" を入れる
 
 ## Exclude Styles（Negative Prompt）の作成ルール
 - 言語=英語、**Styles の20〜40%の文字数**、**カンマ区切りリスト**
