@@ -100,19 +100,30 @@ vinyl crackle, tape hiss, hissy noise floor, pop brightness, overly upbeat progr
 まだおきてる
 ```
 
-## ④手順
-1. Suno（有料）で Style / Exclude / 歌詞を貼って生成
-2. 良いテイクを選ぶ → Persona でボーカルをロック（以降のリリースで使い回す）
-3. 曲（可能ならステムも）を `input/yofuke-no-tonari.wav`（or `input/yofuke-no-tonari_stems/`）に置く
-4. `python scripts/run_audio.py --input input/yofuke-no-tonari.wav --name "夜更けのとなり"` で ⑤〜⑩
+## ④〜⑩（完了）
+`python scripts/run_audio.py --input input/yofuke-no-tonari_stems --name "夜更けのとなり" --instrumental`
+で本編＋インスト版を書き出し済み。
 
-## ⑪ RouteNote メタデータ（リリース作成時）
+## ⑪-a ジャケット（`branding.md` のビジュアルアイデンティティ準拠）
+
+シーン: 夜更けの机。人物の肩越し、開いたノートとペン、冷めたコーヒーのマグ、
+小さなデスクランプの灯り、外は深い青の夜の窓。
+
+生成プロンプト（画像ツールに貼る。出力を正方形3000pxにトリミング＋アップスケール）:
+```
+cinematic night photograph, a wooden desk seen from just behind a person's shoulder, an open notebook and a pen, a half-full mug of coffee gone cold, a small desk lamp glowing, a dark window with deep blue night beyond, a single warm amber practical light off-center, everything else in deep indigo-teal shadow, soft halation and gentle film grain, shallow depth of field, muted filmic color grade, person present only as an implied presence (no visible face, not centered), generous negative space, rule-of-thirds composition, quiet and intimate mood, shot on 35mm, 3:2 frame
+```
+- ネガティブ（対応ツールなら）: `text, watermark, logo, visible face, centered subject, oversaturated, harsh flash, daytime, clutter`
+- 完成画像は `covers/001-yofuke-no-tonari.jpg` に保存。
+
+## ⑪-b RouteNote メタデータ（リリース作成時）
 - 曲名: 夜更けのとなり ／ アーティスト: Tonarine
+- 収録: (1) 夜更けのとなり (2) 夜更けのとなり (Instrumental) ※同一シングルに2トラック or 別リリース
 - 配信日: 提出から2〜4週間先
-- ℗ & © : (year) Tonarine
-- 作詞: （生成AI関与を開示）／ 作曲: Suno + 本人
-- ジャンル: Lo-Fi / Electronic（要確認）
-- 明示的コンテンツ: No
+- ℗ & © : 2026 Tonarine
+- 作詞: 本人（生成AI関与を開示）／ 作曲・編曲: Suno（AI）＋本人
+- ジャンル: Lo-Fi（sub: Electronic）
+- 言語: Japanese ／ 明示的コンテンツ: No
 - AI開示: あり。使用プラットフォーム = Suno（https://suno.com）。商用利用権を保有（有料プラン）
-- ジャケット: 3000×3000px JPG / RGB / 25MB未満（アートディレクション未定）
+- ジャケット: `covers/001-yofuke-no-tonari.jpg`（3000×3000 / sRGB / <25MB）
 - 注意: AI楽曲は YouTube Content ID 対象外
