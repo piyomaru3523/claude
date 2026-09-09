@@ -61,6 +61,13 @@ generous empty space, square, no text
 - 実際に使ったプロンプトは各 `releases/00N-*.md` に記録。カバー画像は `covers/` に置く。
 - 001 は Canva の画像生成で作成（`releases/001` にシーン記載）。
 
+## 曲タイトルの表記（全リリース）
+- **配信メタデータのタイトルはローマ字（ヘボン式）** に統一する。RouteNote が非ASCII文字を
+  「Unrecognised Characters」として警告し、海外の検索にも乗らないため。アーティスト名
+  `Tonarine` がラテン文字なのとも揃う。
+- 日本語表記は localized/alternative title 欄があればそこへ。SNS・ジャケット周辺では併記可。
+- 例: `Yofuke no Tonari`（夜更けのとなり）／ インスト版は Title Version 欄に `Instrumental`。
+
 ## SNS
 - Instagram: **`@_tonarine`**（`@tonarine` が取得不可のため）。表示名は `Tonarine` で統一。
   種別=クリエイター／カテゴリ=ミュージシャン。

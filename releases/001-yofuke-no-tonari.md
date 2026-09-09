@@ -2,8 +2,8 @@
 
 | 項目 | 値 |
 |---|---|
-| 曲名 | **夜更けのとなり** |
-| ローマ字 | Yofuke no Tonari |
+| 配信タイトル | **Yofuke no Tonari**（ローマ字。RouteNoteが非ASCIIを警告するため）|
+| 日本語表記 | 夜更けのとなり（localized title 欄があれば入れる。SNS等では併記可）|
 | アーティスト | Tonarine（`branding.md`） |
 | 由来 | Billboard JAPAN Hot 100 2026-09-02 付の分析（`work/features_2026-09-02.json`）→ 案B |
 | 尺の目安 | 2:50 |
@@ -127,7 +127,8 @@ soft hand-drawn illustration, anime-adjacent, warm muted palette, a person seen 
 
 ### リリース（Single）
 ```
-Release title: 夜更けのとなり
+Release title: Yofuke no Tonari
+（日本語表記 夜更けのとなり は localized/alternative title 欄があればそこへ）
 Primary artist: Tonarine
 Release type: Single
 Primary genre: Lo-Fi   (無ければ Electronic)
@@ -148,7 +149,7 @@ Cover art: covers/001-yofuke-no-tonari.jpg
 
 ### トラック1
 ```
-Track title: 夜更けのとなり
+Track title: Yofuke no Tonari
 Track version: （空欄）
 Track artist: Tonarine
 Featured artist: （なし）
@@ -165,7 +166,7 @@ Audio file: output/夜更けのとなり.flac
 
 ### トラック2（インスト版）
 ```
-Track title: 夜更けのとなり
+Track title: Yofuke no Tonari
 Track version: Instrumental
 Track artist: Tonarine
 Featured artist: （なし）
