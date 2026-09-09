@@ -9,7 +9,10 @@
 | 尺の目安 | 2:50 |
 | 言語 | Japanese |
 | ジャンル | Lo-fi / チル（作業用BGM） |
-| ステータス | Suno生成待ち（有料プラン・商用利用権） |
+| ステータス | ⑤〜⑩ 完了。⑪ 試聴確認待ち |
+| マスター | `output/夜更けのとなり.flac`（FLAC 44.1k/16bit, 3:43）／ QC: -13.97 LUFS / -0.96 dBTP 合格 |
+| ⑥選定 | B_standard（Coverless book）。mix: BPM123 / 重心1058Hz / RMS0.044 |
+| ステム | Suno 9パート zip（Google Drive経由取得）。`input/yofuke-no-tonari_stems/` |
 
 ## Suno 入力
 

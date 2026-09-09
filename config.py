@@ -66,12 +66,17 @@ KEEP_24BIT_MASTER = True     # output/masters/ に 24bit マスターを別途�
 #   小文字化して部分一致で判定。該当なしは 0dB。
 # ------------------------------------------------------------------
 STEM_GAIN_DB = {
-    "vocal": -1.0,   # ボーカルは主張しすぎない（作業用BGM棚の趣旨）
+    "lead vocal": -1.0,   # ボーカルは主張しすぎない（作業用BGM棚の趣旨）
+    "backing vocal": -3.0,  # ハモリはさらに控えめ
+    "vocal": -1.0,
     "voice": -1.0,
     "drum": -0.5,
+    "percussion": -1.5,
     "bass": 0.0,
     "guitar": -1.5,
     "piano": -1.0,
+    "keyboard": -1.0,
+    "keys": -1.0,
     "synth": -1.5,
     "other": -1.5,
     "instrument": 0.0,
