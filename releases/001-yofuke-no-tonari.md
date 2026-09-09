@@ -114,6 +114,8 @@ vinyl crackle, tape hiss, hissy noise floor, pop brightness, overly upbeat progr
 cinematic night photograph, a wooden desk seen from just behind a person's shoulder, an open notebook and a pen, a half-full mug of coffee gone cold, a small desk lamp glowing, a dark window with deep blue night beyond, a single warm amber practical light off-center, everything else in deep indigo-teal shadow, soft halation and gentle film grain, shallow depth of field, muted filmic color grade, person present only as an implied presence (no visible face, not centered), generous negative space, rule-of-thirds composition, quiet and intimate mood, shot on 35mm, 3:2 frame
 ```
 - ネガティブ（対応ツールなら）: `text, watermark, logo, visible face, centered subject, oversaturated, harsh flash, daytime, clutter`
+- 生成後、**サイン** `Tonarine`（書体 Sacramento・右下・幅の4〜6%・琥珀/生成り 70〜85%・端から4〜5%）
+  をテキストレイヤーで重ねる（`branding.md` 参照）。
 - 完成画像は `covers/001-yofuke-no-tonari.jpg` に保存。
 
 ## ⑪-b RouteNote メタデータ（リリース作成時）
