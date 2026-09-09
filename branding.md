@@ -25,7 +25,7 @@
 
 ## ビジュアルアイデンティティ（ジャケット）— 全リリース固定
 
-作風: **シネマティック写真**（実写 or フォトリアルなAI画像）。
+作風: **手描きイラスト**（アニメ寄り／Lofi Girl 系。温かいミュートな色、粒状のテクスチャ）。
 
 ### 固定ルール
 - **ムード**: 夜更けの小さな灯りのある空間。静かで、少し切なく、温かい。
@@ -50,15 +50,16 @@
 
 ### 生成プロンプトのテンプレ（固定部＋[SCENE]差し替え）
 ```
-cinematic night photograph, [SCENE], a single warm amber practical light off-center,
-everything else in deep indigo-teal shadow, soft halation and gentle film grain,
-shallow depth of field, muted filmic color grade, person present only as an
-implied presence (no visible face, not centered), generous negative space,
-rule-of-thirds composition, quiet and intimate mood, shot on 35mm, 3:2 frame
+soft hand-drawn illustration, anime-adjacent, warm muted palette, [SCENE],
+a glowing warm desk lamp as the single light source off-center, deep indigo-navy
+shadows with warm amber light, gentle linework, grainy textured shading, cozy and
+quiet, person present only from behind (no visible face, not centered),
+generous empty space, square, no text
 ```
-- 使う画像ツール（Midjourney / DALL-E / SDXL / Ideogram 等）に上記を貼り、`[SCENE]` だけ
-  曲ごとに差し替える。出力を正方形3000pxにトリミング＋アップスケール。
-- 実際に使ったプロンプトは各 `releases/00N-*.md` に記録する。カバー画像は `covers/` に置く。
+- ネガティブ: `text, watermark, signature, harsh outlines, bright daylight, oversaturated, chibi, busy background, faces`
+- 出力を正方形にし **3000×3000px** へ（Canva の Upscale / AI 拡大が望ましい。lanczos だと甘くなる）。
+- 実際に使ったプロンプトは各 `releases/00N-*.md` に記録。カバー画像は `covers/` に置く。
+- 001 は Canva の画像生成で作成（`releases/001` にシーン記載）。
 
 ## SNS
 - Instagram: **`@_tonarine`**（`@tonarine` が取得不可のため）。表示名は `Tonarine` で統一。

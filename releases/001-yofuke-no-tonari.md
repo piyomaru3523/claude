@@ -106,17 +106,18 @@ vinyl crackle, tape hiss, hissy noise floor, pop brightness, overly upbeat progr
 
 ## ⑪-a ジャケット（`branding.md` のビジュアルアイデンティティ準拠）
 
-シーン: 夜更けの机。人物の肩越し、開いたノートとペン、冷めたコーヒーのマグ、
-小さなデスクランプの灯り、外は深い青の夜の窓。
+作風: **手描きイラスト**（案2）。シーン: 夜、後ろ姿の人物が小さな机でノートに書く。
+暖色のデスクランプ、マグ、鉛筆立て、植物、左に青い夜の窓。
 
-生成プロンプト（画像ツールに貼る。出力を正方形3000pxにトリミング＋アップスケール）:
+Canva の画像生成で作成。プロンプト:
 ```
-cinematic night photograph, a wooden desk seen from just behind a person's shoulder, an open notebook and a pen, a half-full mug of coffee gone cold, a small desk lamp glowing, a dark window with deep blue night beyond, a single warm amber practical light off-center, everything else in deep indigo-teal shadow, soft halation and gentle film grain, shallow depth of field, muted filmic color grade, person present only as an implied presence (no visible face, not centered), generous negative space, rule-of-thirds composition, quiet and intimate mood, shot on 35mm, 3:2 frame
+soft hand-drawn illustration, anime-adjacent, warm muted palette, a person seen from behind at a small desk at night, a glowing desk lamp, an open notebook and a mug, a window with deep blue night outside, gentle linework, grainy textured shading, cozy and quiet, deep indigo shadows with warm amber light, generous empty space, no text
 ```
-- ネガティブ（対応ツールなら）: `text, watermark, logo, visible face, centered subject, oversaturated, harsh flash, daytime, clutter`
+- 生成画像 1264×1264 → `covers/001-yofuke-no-tonari_bg.jpg`（lanczos で3000化・仮）。
+  Canva の Upscale で作り直すと綺麗。
 - 生成後、**サイン** `Tonarine`（書体 Sacramento・右下・幅の4〜6%・琥珀/生成り 70〜85%・端から4〜5%）
   をテキストレイヤーで重ねる（`branding.md` 参照）。
-- 完成画像は `covers/001-yofuke-no-tonari.jpg` に保存。
+- 完成画像は `covers/001-yofuke-no-tonari.jpg`（3000×3000 / sRGB / <25MB）に保存。
 
 ## ⑪-b RouteNote メタデータ（リリース作成時）
 - 曲名: 夜更けのとなり ／ アーティスト: Tonarine

@@ -12,3 +12,7 @@
 /.venv/
 __pycache__/
 *.pyc
+
+# ジャケットの作業用中間ファイル（最終 covers/00N-<slug>.jpg は追跡する）
+/covers/*_bg.*
+/covers/*_work.*
