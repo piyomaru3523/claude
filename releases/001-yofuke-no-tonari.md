@@ -120,14 +120,129 @@ soft hand-drawn illustration, anime-adjacent, warm muted palette, a person seen 
   をテキストレイヤーで重ねる（`branding.md` 参照）。
 - 完成画像は `covers/001-yofuke-no-tonari.jpg`（3000×3000 / sRGB / <25MB）に保存。
 
-## ⑪-b RouteNote メタデータ（リリース作成時）
-- 曲名: 夜更けのとなり ／ アーティスト: Tonarine
-- 収録: (1) 夜更けのとなり (2) 夜更けのとなり (Instrumental) ※同一シングルに2トラック or 別リリース
-- 配信日: 提出から2〜4週間先
-- ℗ & © : 2026 Tonarine
-- 作詞: 本人（生成AI関与を開示）／ 作曲・編曲: Suno（AI）＋本人
-- ジャンル: Lo-Fi（sub: Electronic）
-- 言語: Japanese ／ 明示的コンテンツ: No
-- AI開示: あり。使用プラットフォーム = Suno（https://suno.com）。商用利用権を保有（有料プラン）
-- ジャケット: `covers/001-yofuke-no-tonari.jpg`（3000×3000 / sRGB / <25MB）
-- 注意: AI楽曲は YouTube Content ID 対象外
+## ⑪-b RouteNote 入力（コピペ用）
+
+`<...>` は自分で埋める。RouteNote は画面ごとに項目名が微妙に違うので、近い名前の欄に入れる。
+
+### リリース（Single）
+```
+Release title: 夜更けのとなり
+Primary artist: Tonarine
+Release type: Single
+Primary genre: Lo-Fi   (無ければ Electronic)
+Secondary genre: Hip-Hop/Rap
+Language: Japanese
+Original release date: <YYYY-MM-DD 初出。無ければ配信日と同じ>
+Digital release date: <YYYY-MM-DD 提出から2〜4週間先>
+Label: Tonarine
+℗ (P-line): 2026 Tonarine
+© (C-line): 2026 Tonarine
+UPC/EAN: （空欄＝RouteNoteが自動発行）
+Territories: Worldwide
+Stores: All
+Cover art: covers/001-yofuke-no-tonari.jpg
+```
+
+### トラック1
+```
+Track title: 夜更けのとなり
+Track version: （空欄）
+Track artist: Tonarine
+Featured artist: （なし）
+Songwriter / Composer (実名必須): <あなたの法的な氏名>
+Songwriter role: Lyrics
+Publisher: Copyright Control
+Instrumental: No
+Explicit: No
+Lyrics language: Japanese
+ISRC: （空欄＝自動発行）
+P-line: 2026 Tonarine
+Audio file: output/夜更けのとなり.flac
+```
+
+### トラック2（インスト版）
+```
+Track title: 夜更けのとなり
+Track version: Instrumental
+Track artist: Tonarine
+Featured artist: （なし）
+Songwriter / Composer (実名必須): <あなたの法的な氏名>
+Songwriter role: Lyrics
+Publisher: Copyright Control
+Instrumental: Yes
+Explicit: No
+Lyrics language: （なし／Instrumental）
+ISRC: （空欄＝自動発行）
+P-line: 2026 Tonarine
+Audio file: output/夜更けのとなり (Instrumental).flac
+```
+
+### AI開示（RouteNote の AI セクション）
+```
+AI generated: Yes
+AI platform(s) used: Suno
+AI platform link: https://suno.com
+Commercial rights confirmed: Yes （Suno 有料プラン＝商用利用権あり）
+Human contribution: 作詞・選曲・編集・マスタリングは本人。作曲/歌唱は Suno (AI)。
+```
+
+### 歌詞（ストアに載せる場合。トラック1のみ）
+```
+夜更けの机
+小さな灯り
+キミのペンが走る
+静かな夜
+コーヒーはぬるい
+それでも進む
+となりで欠伸を
+噛みころしてる
+
+目をこすっても
+まだいけるはず
+時計の針が
+背中をおす
+
+無理しないでいい
+ゆっくりでいい
+キミのペースで
+夜をわたろう
+となりにいるよ
+おなじ灯りで
+
+窓の外には
+青い暗闇
+誰もいない道
+風だけが泣く
+やりかけの夢
+閉じずに置いて
+朝になったら
+また手をのばそう
+
+無理しないでいい
+ゆっくりでいい
+キミのペースで
+夜をわたろう
+となりにいるよ
+おなじ灯りで
+
+ゆっくり息をして
+あわてなくていい
+ひとつずつでいい
+ほどいていこう
+
+無理しないでいい
+ゆっくりでいい
+キミの指先
+光をすくう
+となりにいるよ
+夜明けまでいるよ
+
+静かな夜
+キミとここに
+まだ起きてる
+```
+
+### 注意
+- AI楽曲は YouTube Content ID 対象外（登録欄が出てもオフ）。
+- 実名の Songwriter は必須（アーティスト名 Tonarine は不可）。表に出るのは Tonarine のみ。
+- 本編とインスト版を**別リリース**にしてもよい（その場合 UPC が2つ、配信日を揃える）。
