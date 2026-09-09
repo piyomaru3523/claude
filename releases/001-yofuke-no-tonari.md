@@ -9,7 +9,8 @@
 | 尺の目安 | 2:50 |
 | 言語 | Japanese |
 | ジャンル | Lo-fi / チル（作業用BGM） |
-| ステータス | **確定**（⑤〜⑩完了・試聴OK）。⑪ ジャケット＋RouteNote 待ち |
+| ステータス | 音源・ジャケット確定。**RouteNote アップロード待ち** |
+| ジャケット | `covers/001-yofuke-no-tonari.jpg`（3000×3000 / JPG / sRGB / 0.6MB）確定 |
 | マスター | `output/夜更けのとなり.flac`（FLAC 44.1k/16bit, 3:43, **-15.85 LUFS** / -0.99 dBTP） |
 | インスト版 | `output/夜更けのとなり (Instrumental).flac`（-15.89 LUFS / -0.95 dBTP） |
 | 採用ソース | **take1 のステム**（`input/yofuke-no-tonari_stems/`）→ ⑤ステム別ゲイン → -16 LUFS |
