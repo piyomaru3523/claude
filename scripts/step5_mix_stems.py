@@ -96,17 +96,36 @@ def standardize(src: Path, out: Path) -> None:
     _write(out, audio, TARGET_SR)
 
 
+VOCAL_KEYWORDS = ("vocal", "voice", "vox")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="⑤ ステムバランス調整 / ミックスダウン")
     ap.add_argument("--input", type=Path, required=True, help="ステムのディレクトリ または 完成ミックスのファイル")
     ap.add_argument("--out", type=Path, required=True, help="出力 wav（work/ 配下想定）")
+    ap.add_argument("--instrumental", action="store_true",
+                    help="ボーカル系ステム（vocal/voice/vox）を除外してインスト版を作る")
+    ap.add_argument("--exclude", default="",
+                    help="除外するステム名キーワード（カンマ区切り、部分一致・小文字）")
     args = ap.parse_args()
 
-    step("⑤ ステムバランス調整")
+    drop = [k.strip().lower() for k in args.exclude.split(",") if k.strip()]
+    if args.instrumental:
+        drop += list(VOCAL_KEYWORDS)
+
+    step("⑤ ステムバランス調整" + ("（インスト）" if args.instrumental else ""))
     if args.input.is_dir():
         stems = [p for p in find_audio(args.input) if p.suffix.lower() in AUDIO_EXTS]
         if not stems:
             die(f"ステムが見つかりません: {args.input}")
+        if drop:
+            kept = [p for p in stems if not any(k in p.name.lower() for k in drop)]
+            for p in stems:
+                if p not in kept:
+                    log(f"除外: {p.name}")
+            stems = kept
+            if not stems:
+                die("除外の結果ステムが0本になりました。")
         if len(stems) == 1:
             log("ステム1本のみ → 標準化のみ実施")
             standardize(stems[0], args.out)

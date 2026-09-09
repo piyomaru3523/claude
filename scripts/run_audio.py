@@ -8,10 +8,13 @@
   python scripts/run_audio.py --input input/song.wav --name "Focus Rain"
   # ステム一式（フォルダ）
   python scripts/run_audio.py --input input/song_stems --name "Focus Rain"
+  # ステムから本編＋インスト版を両方
+  python scripts/run_audio.py --input input/song_stems --name "Focus Rain" --instrumental
 """
 from __future__ import annotations
 
 import argparse
+import json as _json
 import subprocess
 import sys
 from pathlib import Path
@@ -33,17 +36,9 @@ def sh(script: str, *args: str) -> None:
         die(f"{script} が失敗しました (exit {proc.returncode})")
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser(description="⑤〜⑩ 一括実行")
-    ap.add_argument("--input", type=Path, required=True, help="Sunoからのダウンロード（ファイル or ステムのフォルダ）")
-    ap.add_argument("--name", required=True, help="曲名")
-    ap.add_argument("--keep-going", action="store_true",
-                    help="QCが最後まで通らなくても⑩まで進める（既定は中断）")
-    args = ap.parse_args()
-    if not args.input.exists():
-        die(f"入力が見つかりません: {args.input}")
-
-    slug = safe_name(args.name).replace(" ", "_").replace("　", "_")
+def process(input_path: Path, name: str, keep_going: bool, instrumental: bool) -> bool:
+    """1曲分の ⑤〜⑩。QC 合格なら True。"""
+    slug = safe_name(name).replace(" ", "_").replace("　", "_")
     w = config.WORK_DIR
     mix = w / f"{slug}_mix.wav"
     ref_json = w / f"{slug}_ref.json"
@@ -51,14 +46,18 @@ def main() -> int:
     ln = w / f"{slug}_ln.wav"
     qc_json = w / f"{slug}_qc.json"
 
-    step(f"▶ {args.name}  ({args.input})")
+    step(f"▶ {name}  ({input_path})")
 
-    sh("step5_mix_stems.py", "--input", str(args.input), "--out", str(mix))
+    step5_args = ["--input", str(input_path), "--out", str(mix)]
+    if instrumental:
+        step5_args.append("--instrumental")
+    sh("step5_mix_stems.py", *step5_args)
     sh("step6_pick_reference.py", "--input", str(mix), "--json", str(ref_json))
     sh("step7_master_matchering.py", "--input", str(mix), "--ref-json", str(ref_json),
        "--out", str(master))
 
     passed = False
+    m = v = None
     for attempt in range(config.QC_MAX_RETRY + 1):
         tp = config.TARGET_TP - 0.5 * attempt
         if attempt:
@@ -72,21 +71,42 @@ def main() -> int:
             passed = True
             break
 
-    import json as _json
     qc_json.write_text(_json.dumps({**m, **v}, ensure_ascii=False, indent=2), encoding="utf-8")
 
+    if not passed and not keep_going:
+        die("QCが最後まで合格しませんでした。--keep-going で強制続行できますが、値を確認してください。")
     if not passed:
-        msg = "QCが最後まで合格しませんでした。"
-        if not args.keep_going:
-            die(msg + " --keep-going で強制続行できますが、値を確認してください。")
-        log("WARN: " + msg + " --keep-going 指定のため⑩へ進みます。")
+        log("WARN: QC未合格。--keep-going 指定のため⑩へ進みます。")
 
-    sh("step10_export.py", "--input", str(ln), "--name", args.name)
+    sh("step10_export.py", "--input", str(ln), "--name", name)
+    return passed
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="⑤〜⑩ 一括実行")
+    ap.add_argument("--input", type=Path, required=True, help="Sunoからのダウンロード（ファイル or ステムのフォルダ）")
+    ap.add_argument("--name", required=True, help="曲名")
+    ap.add_argument("--keep-going", action="store_true",
+                    help="QCが最後まで通らなくても⑩まで進める（既定は中断）")
+    ap.add_argument("--instrumental", action="store_true",
+                    help="本編に加えてボーカル抜きのインスト版も書き出す（ステム入力時のみ）")
+    args = ap.parse_args()
+    if not args.input.exists():
+        die(f"入力が見つかりません: {args.input}")
+
+    want_inst = args.instrumental and args.input.is_dir()
+    if args.instrumental and not args.input.is_dir():
+        log("WARN: --instrumental はステムのフォルダ入力時のみ。インスト版はスキップします。")
+
+    ok = process(args.input, args.name, args.keep_going, instrumental=False)
+    if want_inst:
+        ok = process(args.input, f"{args.name} (Instrumental)", args.keep_going,
+                     instrumental=True) and ok
 
     step("完了")
     log(f"配信用ファイルは {config.OUTPUT_DIR} を確認してください。")
     log("⑪ 人が試聴 → RouteNote へアップロード（AI関与の開示 / 商用利用権の確認を忘れずに）")
-    return 0 if passed else 2
+    return 0 if ok else 2
 
 
 if __name__ == "__main__":

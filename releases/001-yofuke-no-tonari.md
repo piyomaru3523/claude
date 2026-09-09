@@ -9,10 +9,12 @@
 | 尺の目安 | 2:50 |
 | 言語 | Japanese |
 | ジャンル | Lo-fi / チル（作業用BGM） |
-| ステータス | 001-take1: ⑤〜⑩完了もヒス/クラックス過多で不採用。**ノイズ対策版で再生成待ち** |
-| take1 マスター | `output/夜更けのとなり.flac`（QC -13.97 LUFS / -0.96 dBTP 合格）／ 参考のみ |
-| ⑥選定(take1) | B_standard。mix: BPM123 / 重心1058Hz / RMS0.044 |
-| ステム(take1) | Suno 9パート zip（Google Drive経由）。`input/yofuke-no-tonari_stems/` |
+| ステータス | **確定**（⑤〜⑩完了・試聴OK）。⑪ ジャケット＋RouteNote 待ち |
+| マスター | `output/夜更けのとなり.flac`（FLAC 44.1k/16bit, 3:43, **-15.85 LUFS** / -0.99 dBTP） |
+| インスト版 | `output/夜更けのとなり (Instrumental).flac`（-15.89 LUFS / -0.95 dBTP） |
+| 採用ソース | **take1 のステム**（`input/yofuke-no-tonari_stems/`）→ ⑤ステム別ゲイン → -16 LUFS |
+| ⑥選定 | B_standard（Coverless book） |
+| 経緯 | take1(-14, ノイズ入りプロンプト)→ take2(WAV, ノイズ対策) を経て、ステムのボーカル際立ち＋-16 LUFS の掛け合わせに落ち着いた。詳細は下の「所見」 |
 
 ## take1 の所見（2026-09-10）
 - 出力にヒス/クラックルが目立つ。原因は素材：Styles で `vinyl crackle / tape hiss` を要求
