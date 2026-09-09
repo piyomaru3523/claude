@@ -9,7 +9,8 @@
 | 尺の目安 | 2:50 |
 | 言語 | Japanese |
 | ジャンル | Lo-fi / チル（作業用BGM） |
-| ステータス | 音源・ジャケット確定。**RouteNote アップロード待ち** |
+| ステータス | RouteNote 入稿中。配信日 **2026-09-18(金)** |
+| 要対応 | Spotify for Artists でプレイリスト申請（7日前まで＝今日〜明日中） |
 | ジャケット | `covers/001-yofuke-no-tonari.jpg`（3000×3000 / JPG / sRGB / 0.6MB）確定 |
 | マスター | `output/夜更けのとなり.flac`（FLAC 44.1k/16bit, 3:43, **-15.85 LUFS** / -0.99 dBTP） |
 | インスト版 | `output/夜更けのとなり (Instrumental).flac`（-15.89 LUFS / -0.95 dBTP） |
@@ -130,10 +131,12 @@ Release title: 夜更けのとなり
 Primary artist: Tonarine
 Release type: Single
 Primary genre: Lo-Fi   (無ければ Electronic)
-Secondary genre: Hip-Hop/Rap
+Secondary genre: Pop   (任意。None でも可)
 Language: Japanese
-Original release date: <YYYY-MM-DD 初出。無ければ配信日と同じ>
-Digital release date: <YYYY-MM-DD 提出から2〜4週間先>
+Original / Digital release date: 2026-09-18 (金)
+Preorder date: なし
+Explicit: No
+Custom Album ID: 空欄（任意で TNR-001）
 Label: Tonarine
 ℗ (P-line): 2026 Tonarine
 © (C-line): 2026 Tonarine
