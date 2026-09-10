@@ -2,16 +2,19 @@
 
 | 項目 | 値 |
 |---|---|
-| 配信タイトル | **Yofuke no Tonari**（全世界共通・ローマ字。RouteNoteが非ASCIIを警告するため）|
-| 日本語表記 | 夜更けのとなり（SNS・ジャケット文脈用。配信メタには入れない）|
-| ローカライズ | なし（基本言語が Japanese のため RouteNote が JP ローカライズを拒否）|
+| 配信タイトル | **Yofuke no Tonari**（既定・ローマ字）。日本のみ **夜更けのとなり**（JPローカライズ）|
+| 基本言語 | English（JPローカライズを載せるため。歌詞は日本語）|
 | アーティスト | Tonarine（`branding.md`） |
 | 由来 | Billboard JAPAN Hot 100 2026-09-02 付の分析（`work/features_2026-09-02.json`）→ 案B |
 | 尺の目安 | 2:50 |
 | 言語 | Japanese |
 | ジャンル | Lo-fi / チル（作業用BGM） |
-| ステータス | RouteNote 入稿中。配信日 **2026-09-25(金)**（RouteNoteは最短14日） |
-| 要対応 | Spotify for Artists でプレイリスト申請（配信7日前まで） |
+| ステータス | RouteNote 入稿完了（審査待ち）。配信日 **2026-09-25(金)** |
+| UPC | 5064140145972（RouteNote自動発行） |
+| ISRC | Track1 GXBDT2664623 ／ Track2 GXBDT2672451 |
+| Genre | Electronic（RouteNote に Lo-Fi 項目なし） |
+| ローカライズ | 日本語あり（基本言語を English に変更して JP ローカライズ `夜更けのとなり` を追加） |
+| 要対応 | Spotify for Artists でプレイリスト申請（配信7日前まで＝〜9/18） |
 | ジャケット | `covers/001-yofuke-no-tonari.jpg`（3000×3000 / JPG / sRGB / 0.6MB）確定 |
 | マスター | `output/夜更けのとなり.flac`（FLAC 44.1k/16bit, 3:43, **-15.85 LUFS** / -0.99 dBTP） |
 | インスト版 | `output/夜更けのとなり (Instrumental).flac`（-15.89 LUFS / -0.95 dBTP） |
