@@ -2,8 +2,9 @@
 
 | 項目 | 値 |
 |---|---|
-| 配信タイトル | **Yofuke no Tonari**（ローマ字。RouteNoteが非ASCIIを警告するため）|
-| 日本語表記 | 夜更けのとなり（localized title 欄があれば入れる。SNS等では併記可）|
+| 配信タイトル | **Yofuke no Tonari**（全世界共通・ローマ字。RouteNoteが非ASCIIを警告するため）|
+| 日本語表記 | 夜更けのとなり（SNS・ジャケット文脈用。配信メタには入れない）|
+| ローカライズ | なし（基本言語が Japanese のため RouteNote が JP ローカライズを拒否）|
 | アーティスト | Tonarine（`branding.md`） |
 | 由来 | Billboard JAPAN Hot 100 2026-09-02 付の分析（`work/features_2026-09-02.json`）→ 案B |
 | 尺の目安 | 2:50 |
