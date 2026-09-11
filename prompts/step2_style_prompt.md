@@ -26,7 +26,14 @@
   trance/euphoric 寄りでも、語彙は「暖かい・夜・低刺激」に振る
 - **ノイズテクスチャ（vinyl crackle / tape hiss）を Styles に書かない**。lo-fi でも Suno が
   過剰に入れ、⑧の -14LUFS 化でノイズ床が約10dB 持ち上がって目立つ（001回目の反省）。
-  "clean" "a quiet noise floor" を書き、Exclude 先頭に "vinyl crackle, tape hiss, hissy noise floor" を入れる
+  Exclude 先頭に "vinyl crackle, tape hiss, static, hum, background noise, muddy low end,
+  hazy production, low fidelity" を入れる
+- **"haze" "saturation" 等のもや／アナログ劣化を連想させる語も Styles に書かない**（002/003回目の反省）。
+  "analog pad haze" や "tape saturation" のような表現自体がノイズを誘発しやすい。代わりに
+  "clean analog pads" のように明確に clean 側へ倒す。ボーカル描写にも
+  "recorded with pristine clarity" を足し、プロダクション描写は "warm and pristine" /
+  "crystal-clear, nothing sharp or forward" のように**クリアさを明言**する。
+  それでも雑音が残る場合、次の手は Styles から "lo-fi" 表記自体を弱める（"mellow chill pop" 等に）
 
 ## Exclude Styles（Negative Prompt）の作成ルール
 - 言語=英語、**Styles の20〜40%の文字数**、**カンマ区切りリスト**
