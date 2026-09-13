@@ -79,6 +79,9 @@ STEM_GAIN_DB = {
     "keyboard": -1.0,
     "keys": -1.0,
     "synth": -1.5,
+    "brass": -3.0,     # 目立ちすぎやすいので抑える
+    "strings": -1.0,
+    "woodwinds": -1.5,
     "other": -1.5,
     "instrument": 0.0,
 }
