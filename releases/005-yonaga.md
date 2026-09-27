@@ -6,7 +6,8 @@
 | slug | yonaga |
 | テーマ | 秋の夜長。肌寒い夜、上着、窓の外に虫の声、毛布 |
 | Style | 案B |
-| ステータス | Suno生成待ち |
+| ステータス | ⑤〜⑩完了。⑪ 試聴確認待ち |
+| マスター | `output/夜長.flac`（-15.87 LUFS / -0.98 dBTP）／ インスト版あり（-0.98 dBTP） |
 | 配信目安 | 10〜11月（秋の内容のため早めに） |
 
 ## Suno 入力
@@ -94,9 +95,9 @@ vinyl crackle, tape hiss, static, hum, background noise, muddy low end, hazy pro
 `python scripts/run_audio.py --input input/yonaga_stems --name "夜長" --instrumental`
 
 ## ⑪-a ジャケット
-シーン: 後ろ姿の人物が薄手の上着（カーディガン）を羽織って机に向かう。暗い秋の夜の窓、椅子にもう一枚の毛布、暖色のランプ。
+シーン: 後ろ姿の人物が薄手の上着（カーディガン）を羽織って机に向かう。暗い秋の夜の窓（星・裸木）、椅子にもう一枚の毛布、オイルランプ。001に絵柄を揃えるため、Gemini生成→Canvaで高解像度化という流れで作成。
 ```
-soft hand-drawn illustration, anime-adjacent, warm muted palette, a person seen from behind at a small desk wearing a light cardigan, a dark autumn night through the window, a second blanket draped over the chair, a small warm desk lamp as the single light source off-center, deep indigo-navy shadows with warm amber light, gentle linework, grainy textured shading, cozy and quiet, no visible face, not centered, generous empty space, square, no text
+Soft painterly illustration, hand-painted book cover style, thick soft brushstrokes with visible canvas grain texture, muted desaturated warm brown-amber-olive color palette. Extremely dark, moody, low-key lighting: the entire room is deep shadow except for one small warm pool of lamplight. A young woman with dark hair in a loose messy bun, seen from a three-quarter angle from behind, sitting at a small worn wooden desk. She is a soft dark silhouette with almost no visible detail — her face is deep in shadow, no visible eyes, no clear facial features. She wears a simple long-sleeved cardigan, solid opaque fabric, no transparency. A folded blanket is draped over the back of her wooden chair. To her left, a window shows a dark autumn night sky with faint stars and bare tree branches. A small oil lamp on the desk casts a warm amber glow that fades into darkness elsewhere. Square format, figure off-center, generous dark negative space. No text.
 ```
 右下に `Tonarine` サイン。`covers/005-yonaga.jpg`。
 

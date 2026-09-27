@@ -6,7 +6,8 @@
 | slug | kaerimichi |
 | テーマ | 終電後の帰り道→机。誰もいない道、帰宅して灯りをつける |
 | Style | 案B |
-| ステータス | Suno生成待ち |
+| ステータス | ⑤〜⑩完了。⑪ 試聴確認待ち |
+| マスター | `output/帰り道.flac`（-16.05 LUFS / -0.98 dBTP）／ インスト版あり（-0.93 dBTP） |
 
 ## Suno 入力
 
@@ -48,7 +49,7 @@ vinyl crackle, tape hiss, static, hum, background noise, muddy low end, hazy pro
 おそくなっても
 もどれるばしょがある
 となりにすわるよ
-やかんがなるまで
+つくえにつくまで
 
 [Verse2]
 まどのそとはしずか
@@ -66,7 +67,7 @@ vinyl crackle, tape hiss, static, hum, background noise, muddy low end, hazy pro
 おそくなっても
 もどれるばしょがある
 となりにすわるよ
-やかんがなるまで
+つくえにつくまで
 
 [Bridge]
 くつをそろえておく
@@ -93,9 +94,9 @@ vinyl crackle, tape hiss, static, hum, background noise, muddy low end, hazy pro
 `python scripts/run_audio.py --input input/kaerimichi_stems --name "帰り道" --instrumental`
 
 ## ⑪-a ジャケット
-シーン: 玄関の内側、後ろ姿の人物が小さなランプに手を伸ばして点けようとしている。足元に置いた鞄、暗い部屋、窓の外に人けのない道。
+シーン: カーテンの隙間から、後ろ姿の人物が窓越しに誰もいない夜道を見ている。濡れた路面に街灯の光が反射。001に絵柄を揃えるため、001と同系統のプロンプトでCanva生成。
 ```
-soft hand-drawn illustration, anime-adjacent, warm muted palette, a person seen from behind just inside a doorway, reaching to switch on a small lamp, a bag set down by their feet, a dark room, an empty street visible through a window, the small lamp as the single light source off-center, deep indigo-navy shadows with warm amber light, gentle linework, grainy textured shading, cozy and quiet, no visible face, not centered, generous empty space, square, no text
+Soft painterly illustration, hand-painted book cover style, thick soft brushstrokes with visible canvas grain texture, muted desaturated warm brown-amber-olive color palette. Extremely dark, moody, low-key lighting. A young woman with dark hair in a loose messy bun, seen from behind, small in the frame and off-center, standing near a window at night, looking out. Soft dark silhouette, face deep in shadow, no visible features. Solid opaque cardigan, no transparency. Through the window, a quiet empty night street: wet asphalt reflecting warm amber streetlamp light, bare trees, no people. Square format, generous dark negative space. No text.
 ```
 右下に `Tonarine` サイン。`covers/006-kaerimichi.jpg`。
 

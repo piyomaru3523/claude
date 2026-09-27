@@ -6,7 +6,9 @@
 | slug | gozen-sanji |
 | テーマ | 眠れない三時。時計、天井、寝転がってイヤホン |
 | Style | 案A（ジャズ寄り） |
-| ステータス | Suno生成待ち |
+| ステータス | RouteNote 入稿完了（審査待ち）。配信日 **2026-10-02(金)** |
+| マスター | `output/午前三時.flac`（-16.08 LUFS / -0.97 dBTP）／ インスト版あり（-16.03 LUFS / -5.37 dBTP） |
+| ステム | 8パート（Guitar/Strings含む、Brass/Woodwindsなし）。⑥は本編B_standard／インストA_calm選定 |
 
 ## Suno 入力
 
